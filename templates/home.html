@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Prediction</title>
+
+</head>
+<h2>FWI Prediction</h2>
+<body>
+    <form action="{{url_for('predict')}}"method = "POST">
+        <input type="text" placeholder="Temperature" name="Temperature" required /><br>
+        <input type="text" placeholder="RH" name="RH" required /><br>
+        <input type="text" placeholder="Ws" name="Ws" required /><br>
+        <input type="text" placeholder="Rain" name="Rain" required /><br>
+        <input type="text" placeholder="FFMC" name="FFMC" required /><br>
+        <input type="text" placeholder="DMC" name="DMC" required /><br>
+        <input type="text" placeholder="ISI" name="ISI" required /><br>
+        <input type="text" placeholder="Classes" name="Classes" required /><br>
+        <input type="text" placeholder="Region" name="Region" required /><br>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+<h2>
+    THE FWI Prediction is {{results}}
+</h2>
+    
+</body>
+
+</html>
